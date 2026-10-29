@@ -1,0 +1,9 @@
+project: savantenvs/mdbtools
+target: fuzz_mdb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mdb/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mdb
+    libfuzzer: true
+    timeout: 10
